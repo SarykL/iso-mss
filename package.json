@@ -14,7 +14,11 @@
   "license": "ISC",
   "devDependencies": {
     "gulp-cssnano": "*",
+    "gulp-filter": "^4.0.0",
     "gulp-plumber": "*",
+    "gulp-rigger": "^0.5.8",
+    "gulp-svg-sprites": "^3.0.0",
+    "gulp-svg2png": "^1.0.0",
     "gulp-watch": "*"
   },
   "dependencies": {
@@ -26,6 +30,7 @@
     "gulp-jade": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
-    "gulp-uglify": "*"
+    "gulp-uglify": "*",
+    "owl-carousel-2": "0.0.3"
   }
 }

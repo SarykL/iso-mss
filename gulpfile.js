@@ -1,17 +1,22 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),// Склейка файлов
     browserSync  = require('browser-sync'), // BrowserSync
-    
+
     jade = require('gulp-jade'), // Jade обработчик html
-    
+
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     cssnano = require('gulp-cssnano'), //Минификация CSS
     autoprefixer = require('gulp-autoprefixer'), // Автопрефиксы CSS
-    
+
     imagemin = require('gulp-imagemin'),// Сжатие JPG, PNG, SVG, GIF
-    
+    svgSprite = require('gulp-svg-sprites'),// Создание SVG спрайтов
+    svg2png   = require('gulp-svg2png'),// Конвертация SVG в PNG
+
+    filter    = require('gulp-filter')// Зависимость для svg2png
+
     uglify = require('gulp-uglify'), // Минификация JS
+    rigger = require('gulp-rigger'), // Конкатенация
 
     plumber = require('gulp-plumber'),
     watch = require('gulp-watch');
@@ -34,7 +39,7 @@ gulp.task('sass-dev', function() {
   return gulp.src('src/sass/**/*.scss')
     .pipe(plumber())
     // .pipe(sourcemaps.init())
-    
+
     .pipe(sass({
       style: 'compressed',
       errLogToConsole: true,
@@ -55,7 +60,21 @@ gulp.task('sass-dev', function() {
 gulp.task('img', function() {
   return gulp.src('src/img/**/**/**')
     .pipe(imagemin({ optimizationLevel: 3, progressive: true}))
-    .pipe(gulp.dest('build/img/'));
+    .pipe(gulp.dest('build/img/'))
+            .pipe(filter("**/*.svg"));
+});
+
+//Содание SVG спрайтов
+gulp.task('sprites', function () {
+    return gulp.src('src/sprite/*.svg')
+        .pipe(svgSprite({
+            preview: false,
+            layout: "diagonal",
+            padding: 5,
+            cssFile: '../../src/sass/vendor/_sprite.scss'
+          }))
+        .pipe(gulp.dest('build/img/'))
+        .pipe(filter("**/*.svg"));
 });
 
 //Копируем JS
@@ -100,7 +119,7 @@ gulp.task('fonts', function(){
 
 // WATCH
 gulp.task('default', ['jade-templates','sass-dev','img','js-vendor','js','favicon','fonts'], function () {
-    
+
     browserSync.init({
       server : './build'
     });
@@ -112,7 +131,7 @@ gulp.task('default', ['jade-templates','sass-dev','img','js-vendor','js','favico
     watch(["./src/sass/**/*.scss",'./src/sass/_*.scss'], function() {
       gulp.start('sass-dev');
     });
-    
+
     watch('./src/js/*.js', function() {
       gulp.start('js');
     });
