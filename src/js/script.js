@@ -28,8 +28,8 @@ $(function () {
 		nav: true,
 		navText: ["",""],
 		loop: false,
-		dots: false
-		// responsive: false
+		dots: false,
+		responsive: false
 	});
 
 });
