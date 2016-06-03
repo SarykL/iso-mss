@@ -1,3 +1,17 @@
 include _blocks/_logo
+include _blocks/_navigation
+include _blocks/_search
+include _blocks/_menu
+include _blocks/_contacts
+include _blocks/_button
+
 header.header
-	+logo({'src' : 'img/logo-header.svg'}).logo_header
+	.container
+		+logo({'src' : 'img/logo-header.svg'}).logo_header
+		.header-top
+			+nav
+			+search
+		.header-bottom
+			+menu
+			+contacts
+			+button({'text' : 'Заказать звонок', 'type' : 'button'}).button_call.button_filled

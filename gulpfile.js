@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),// Сжатие JPG, PNG, SVG, GIF
     svgSprite = require('gulp-svg-sprites'),// Создание SVG спрайтов
     svg2png   = require('gulp-svg2png'),// Конвертация SVG в PNG
+	spritesmith = require('gulp.spritesmith'),// Создание PNG спрайтов
 
     filter    = require('gulp-filter')// Зависимость для svg2png
 
@@ -75,6 +76,18 @@ gulp.task('sprites', function () {
           }))
         .pipe(gulp.dest('build/img/'))
         .pipe(filter("**/*.svg"));
+});
+// Создание спрайтов PNG
+gulp.task('sprite', function () {
+	var spriteData = gulp.src('src/sprites/icon/*.png').pipe(spritesmith({
+		imgName: 'sprite.png',
+		imgPath: '../img/sprites/sprite.png',
+		cssName: '_sprite.scss',
+		algorithm: 'alt-diagonal',
+		paddingg: 5
+	}));
+	spriteData.img.pipe(gulp.dest('./dist/img/sprites/'));
+	spriteData.css.pipe(gulp.dest('./src/style/config/'));
 });
 
 //Копируем JS

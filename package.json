@@ -19,7 +19,8 @@
     "gulp-rigger": "^0.5.8",
     "gulp-svg-sprites": "^3.0.0",
     "gulp-svg2png": "^1.0.0",
-    "gulp-watch": "*"
+    "gulp-watch": "*",
+    "gulp.spritesmith": "^6.2.1"
   },
   "dependencies": {
     "browser-sync": "*",

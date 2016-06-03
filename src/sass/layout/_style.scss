@@ -1,14 +1,36 @@
 @import "_blocks/logo";
+@import "_blocks/navigation";
+@import "_blocks/search";
+@import "_blocks/menu";
+@import "_blocks/contacts";
+@import "_blocks/button";
 
-h1{
-	font-size: 2em;
+
+/* ==========================================================================
+   Custom base styles
+   ========================================================================== */
+
+.container {
+	@include j-center(1200px, 15px);
+	@include clearfix();
+}
+
+.wrapper {
+	min-width: 1198px;
 
 }
-main{
-		// color: $gold;
+
+.header {
+	background: #fe2;
+	box-shadow: 0 8px 9.5px 0.5px rgba(19, 60, 66, 0.2);
 }
-@include breakpoint(1024){
-	h1{
-		font-size: .2em;
-	}
+
+.header-top, .header-bottom {
+	float: left;
+	margin-left: 80px;
+	@include clearfix();
+}
+
+* {
+	box-sizing: border-box;
 }
