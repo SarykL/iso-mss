@@ -1,0 +1,57 @@
+.logo {
+	display: block;
+	position: relative;
+
+	&__img {
+		display: inline-block;
+	}
+
+	&__text {
+		display: inline-block;
+		position: absolute;
+		top: 25%;
+		font-family: Ubuntu;
+		font-weight: 500;
+		line-height: 20px;
+	}
+}
+
+.logo_header {
+
+	& .logo {
+		width: 284px;
+		height: 127px;
+
+		&__img {
+			margin-right: 10px;
+			width: 128px;
+			height: 127px;
+		}
+
+		&__text {
+			width: 146px;
+			font-size: 18px;
+			color: $main-theme-color;
+		}
+	}
+}
+
+.logo_footer {
+
+	& .logo {
+
+		&__img {
+			margin-right: 15px;
+			width: 123px;
+			height: 123px;
+			// opacity: .35;
+			background-color: white;
+		}
+
+		&__text {
+			@include opacity(.35);
+			color: white;
+			font-size: 14px;
+		}
+	}
+}
