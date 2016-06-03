@@ -4,6 +4,7 @@
 @import "_blocks/menu";
 @import "_blocks/contacts";
 @import "_blocks/button";
+@import "_blocks/banner";
 
 
 /* ==========================================================================
@@ -21,13 +22,14 @@
 }
 
 .header {
-	background: #fe2;
+	// background: #fe2;
 	box-shadow: 0 8px 9.5px 0.5px rgba(19, 60, 66, 0.2);
 }
 
+
 .header-top, .header-bottom {
 	float: left;
-	margin-left: 80px;
+	margin-left: 75px;
 	@include clearfix();
 }
 

@@ -21,7 +21,18 @@ $(function () {
 		$(this).find('ul.inserted-menu').fadeIn(200);
 	}, function() {
 		$(this).find('ul.inserted-menu').fadeOut(200);
+	});
 
+	$('.banner__carousel').owlCarousel({
+		items: 1,
+		nav: true,
+		navText: ["",""],
+		loop: false,
+		dots: false
+		// responsive: false
+	});
 
-	})
+});
+$(document).ready(function(){
+
 });
