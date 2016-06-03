@@ -1,0 +1,43 @@
+.button {
+	height: 46px;
+	font-family: 'Ubuntu';
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 26px;
+	border-radius: 5px;
+	color: $buttons-text-color;
+
+	&_filled {
+		background-image: linear-gradient(180deg, #6beea7 0%, #43d297 100%);
+
+		&:hover {
+			background-image: linear-gradient(180deg, #43d297 0%, #6beea7 100%);
+		}
+	}
+
+	&_call {
+		width: 202px;
+		margin-top: 40px;
+		margin-left: 60px;
+	}
+
+	&_order {
+		width: 133px;
+		margin-top: 45px;
+	}
+
+	&_details {
+		width: 153px;
+		margin-top: 40px;
+		margin-left: 8px;
+	}
+
+	&_empty {
+		border: 2px solid $buttons-text-color;
+
+		&:hover {
+			color: #fff;
+			background-color: #133c42;
+		}
+	}
+}

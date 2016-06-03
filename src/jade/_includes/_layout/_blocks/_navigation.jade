@@ -1,0 +1,7 @@
+mixin nav()
+	nav.navigation&attributes(attributes)
+		- var navItemList = ['Главная', 'Новости', 'Публикации', 'О компании', 'Контакты']
+		ul.navigation__list
+			each navItem in navItemList
+				li.navigation__item: a(href="#").navigation__link= navItem
+				

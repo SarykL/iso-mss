@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Navigation styles
+   ========================================================================== */
+
+.navigation {
+	float: left;
+	font-family: 'Ubuntu';
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 20px;
+	margin-top: 12px;
+
+	&__list {
+		display: block;
+	}
+
+	&__item {
+		display: inline-block;
+		margin-right: 35px;
+
+	}
+}

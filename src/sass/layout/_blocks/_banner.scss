@@ -1,0 +1,80 @@
+.banner {
+	position: relative;
+
+	&__carousel {
+		height: 474px;
+		@include j-center(1440px);
+	}
+
+	&__description {
+		position: absolute;
+		z-index: 2;
+		bottom: 26%;
+		left: 22%;
+	}
+	&__text {
+		display: block;
+		width: 610px;
+		color: $text-color;
+		font-family: 'Ubuntu';
+		font-size: 50px;
+		font-weight: 300;
+		line-height: 70px;
+
+		&_small {
+			font-size: 24px;
+			line-height: 34px;
+			font-weight: 400;
+		}
+	}
+}
+
+
+
+
+.owl-prev {
+	position: absolute;
+	width: 54px;
+	height: 54px;
+	border: 2px solid #c9cbcf;
+	border-radius: 5px;
+	top: 40%;
+	right: 87%;
+
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.58);
+	}
+
+	&:before {
+		content: '';
+		@include sprite($slider-arrow-left);
+		display: inline-block;
+		position: absolute;
+		top: 35%;
+		left: 40%;
+	}
+
+}
+
+.owl-next {
+	position: absolute;
+	width: 54px;
+	height: 54px;
+	border: 2px solid #c9cbcf;
+	border-radius: 5px;
+	top: 40%;
+	left: 87%;
+
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.58);
+	}
+
+	&:before {
+		content: '';
+		@include sprite($slider-arrow-right);
+		display: inline-block;
+		position: absolute;
+		top: 35%;
+		left: 40%;
+	}
+}

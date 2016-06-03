@@ -1,0 +1,29 @@
+//- include _button
+mixin banner()
+	.banner
+		.banner__carousel
+			.banner__item
+				.banner__description
+					span.banner__text: | Сертификация ISO 9001-2015...
+					+button({'text' : 'Заказать', 'type' : 'button'}).button_filled.button_order
+					+button({'text' : 'Подробнее', 'type' : 'button'}).button_empty.button_details
+				img(src="img/banner1.jpg", alt="").banner__item-image
+			.banner__item
+				.banner__description
+					span.banner__text: | Сертификация ХАССП
+					+button({'text' : 'Заказать', 'type' : 'button'}).button_filled.button_order
+					+button({'text' : 'Подробнее', 'type' : 'button'}).button_empty.button_details
+				img(src="img/banner2.jpg", alt="")
+			.banner__item
+				.banner__description
+					span.banner__text: | Сертификация продукции
+					span.banner__text.banner__text_small: | ГОСТ Р, ТР/ТС, Пожарная сертификация
+					+button({'text' : 'Заказать', 'type' : 'button'}).button_filled.button_order
+					+button({'text' : 'Подробнее', 'type' : 'button'}).button_empty.button_details
+				img(src="img/banner3.jpg", alt="")
+			.banner__item
+				.banner__description
+					span.banner__text: | Внедрение ISO, разработка документации
+					+button({'text' : 'Заказать', 'type' : 'button'}).button_filled.button_order
+					+button({'text' : 'Подробнее', 'type' : 'button'}).button_empty.button_details
+				img(src="img/banner4.jpg", alt="")

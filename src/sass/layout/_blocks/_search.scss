@@ -1,0 +1,27 @@
+.search {
+	float: left;
+	display: block;
+	margin-top: 10px;
+	position: relative;
+	// margin-left: 10px;
+
+	&__btn {
+		@include sprite($search);
+		display: inline-block;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+	}
+
+	&__request {
+		width: 219px;
+		height: 24px;
+		background-color: white;
+		border: 1px solid #e6e9ed;
+		border-radius: 150px;
+		outline: none;
+		padding: 5px 10px 5px 25px;
+		overflow: hidden;
+		text-overflow: clip;
+	}
+}

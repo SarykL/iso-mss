@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Dropdown menu styles
+   ========================================================================== */
+
+.menu {
+	margin-top: 40px;
+	float: left;
+
+}
+
+.dropdown-btn {
+	display: block;
+	position: relative;
+	padding-left: 60px;
+	width: 279px;
+	height: 46px;
+	text-align: left;
+	color: $secondary-theme-color;
+	font-family: 'Ubuntu';
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 20px;
+	background-color: #f9f9fa;
+	border-radius: 5px;
+
+	&:before {
+		content: '';
+		@include sprite($menu);
+		display: inline-block;
+		position: absolute;
+		left: 20px;
+		bottom: 15px;
+	}
+
+	&:after {
+		content: '';
+		@include sprite($menu-arrow);
+		display: inline-block;
+		position: absolute;
+		right: 20px;
+		top: 50%;
+	}
+}
+
+.dropdown-menu {
+	display: none;
+	position: absolute;
+	// padding: 10px 0;
+	margin-top: 15px;
+	width: 278px;
+	background-color: #f9f9fa;
+	border-radius: 5px;
+	box-shadow: 0 3px 6.5px 0.5px rgba(67, 74, 84, 0.68);
+	z-index: 10;
+
+	&__item {
+		padding: 5px 15px;
+		font-family: 'Ubuntu';
+		font-size: 14px;
+		font-weight: 300;
+		position: relative;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #e9fcf2;
+		}
+
+		&_heading {
+			margin: 10px 0;
+			font-family: 'Ubuntu';
+			color: $secondary-theme-color;
+			font-size: 18px;
+			font-weight: 500;
+			line-height: 20px;
+
+			&:hover {
+				cursor: default;
+				background-color: #f9f9fa;
+
+			}
+		}
+
+		&_inclusive {
+
+		}
+	}
+
+}
+
+.inserted-menu {
+	display: none;
+	position: absolute;
+	font-family: 'Ubuntu';
+	font-size: 14px;
+	font-weight: 300;
+	padding: 20px 0;
+	left: 280px;
+	bottom: -130%;
+	width: 287px;
+	background-color: #f9f9fa;
+	border-radius: 5px;
+	box-shadow: 0 3px 6.5px 0.5px rgba(67, 74, 84, 0.68);
+
+	&__item {
+		padding: 15px 50px 0 15px;
+
+		&:hover {
+			background-color: #e9fcf2;
+		}
+	}
+
+
+}

@@ -1,0 +1,16 @@
+.contacts {
+	float: left;
+	margin-top: 40px;
+	margin-left: 80px;
+	color: $buttons-text-color;
+	font-family: 'Ubuntu';
+	font-size: 18px;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 26px;
+
+	&__phone {
+		@include j-stack(1);
+
+	}
+}
