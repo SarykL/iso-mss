@@ -1,0 +1,62 @@
+/* ==========================================================================
+   News section styles
+   ========================================================================== */
+
+.news {
+
+	&__article {
+		@include j-center();
+		margin-top: 55px;
+		font-family: 'Ubuntu';
+		color: $text-color;
+	}
+
+	&__block {
+		@include j-column(1/2);
+		padding: 20px 60px 20px 80px;
+		@include transition(.4s);
+
+		&:hover {
+			background-color: #f9f9fa;
+			border-radius: 5px;
+		}
+	}
+
+	&__heading {
+		margin: 40px 0 20px 0;
+		@include clearfix();
+		line-height: 24px;
+	}
+
+
+	&__pictograph {
+		float: left;
+		margin-right: 15px;
+	}
+
+	&__date {
+		font-size: 12px;
+		font-weight: 300;
+		margin-top: 15px;
+		display: block;
+	}
+
+	&__title {
+		font-size: 14px;
+		font-weight: 700;
+	}
+
+	&__text {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 20px;
+		position: relative;
+
+		&:after {
+			content: '';
+			@include sprite($small-arrow);
+			display: inline-block;
+			margin-left: 10px;
+		}
+	}
+}

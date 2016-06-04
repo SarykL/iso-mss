@@ -8,6 +8,7 @@
 @import "_blocks/about-section";
 @import "_blocks/section-header";
 @import "_blocks/services-section";
+@import "_blocks/news-section";
 
 
 /* ==========================================================================
@@ -21,7 +22,7 @@
 
 .wrapper {
 	min-width: 1198px;
-
+	@include j-center(1444px);
 }
 
 .header {
@@ -39,8 +40,12 @@
 .decoration {
 	@include j-center(1440px);
 	// height: 3200px;
-	background: url("/img/bg-decor.jpg") no-repeat center center;
+}
+
+.main {
+	background: url("/img/bg-decor.jpg") no-repeat top center;
 	background-size: cover;
+
 }
 
 
