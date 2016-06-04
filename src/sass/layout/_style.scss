@@ -36,6 +36,14 @@
 	@include clearfix();
 }
 
+.decoration {
+	@include j-center(1440px);
+	// height: 3200px;
+	background: url("/img/bg-decor.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+
 * {
 	box-sizing: border-box;
 }

@@ -1,4 +1,5 @@
 .services {
+	// background: none;
 
 	&__article {
 		@include j-center(920px);
@@ -52,6 +53,112 @@
 
 		&:not(:nth-child(3n)) {
 			margin-right: 86px;
+		}
+
+		&:hover {
+			background-color: rgba(107, 238, 167, 0.15);
+		}
+
+		/* Services icons */
+
+		&.iso-logo {
+
+			&:after {
+				content: '';
+				@include sprite($iso-logo);
+				display: inline-block;
+				position: absolute;
+				right: 10px;
+				bottom: 15px;
+			}
+		}
+		&.guard {
+
+			&:after {
+				content: '';
+				@include sprite($guard);
+				display: inline-block;
+				position: absolute;
+				right: 10px;
+				bottom: 15px;
+			}
+		}
+		&.leaf {
+
+			&:after {
+				content: '';
+				@include sprite($leaf);
+				display: inline-block;
+				position: absolute;
+				right: 10px;
+				bottom: 15px;
+			}
+		}
+		&.tools {
+
+			&:after {
+				content: '';
+				@include sprite($tools);
+				display: inline-block;
+				position: absolute;
+				right: 10px;
+				bottom: 15px;
+			}
+		}
+		&.docs {
+
+			&:after {
+				content: '';
+				@include sprite($docs);
+				display: inline-block;
+				position: absolute;
+				right: 10px;
+				bottom: 15px;
+			}
+		}
+		&.eac {
+
+			&:after {
+				content: '';
+				@include sprite($eac);
+				display: inline-block;
+				position: absolute;
+				right: 10px;
+				bottom: 15px;
+			}
+		}
+		&.gost-r {
+
+			&:after {
+				content: '';
+				@include sprite($gost-r);
+				display: inline-block;
+				position: absolute;
+				right: 10px;
+				bottom: 15px;
+			}
+		}
+		&.fire {
+
+			&:after {
+				content: '';
+				@include sprite($fire);
+				display: inline-block;
+				position: absolute;
+				right: 10px;
+				bottom: 15px;
+			}
+		}
+		&.checklist {
+
+			&:after {
+				content: '';
+				@include sprite($checklist);
+				display: inline-block;
+				position: absolute;
+				right: 10px;
+				bottom: 15px;
+			}
 		}
 
 	}
