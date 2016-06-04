@@ -3,6 +3,7 @@
    ========================================================================== */
 
 .news {
+	padding-bottom: 60px;
 
 	&__article {
 		@include j-center();
@@ -13,12 +14,14 @@
 
 	&__block {
 		@include j-column(1/2);
-		padding: 20px 60px 20px 80px;
+		padding: 20px 60px 130px 80px;
+		position: relative;
 		@include transition(.4s);
 
 		&:hover {
 			background-color: #f9f9fa;
 			border-radius: 5px;
+			box-shadow: 0px 8px 19px 0px rgba(50, 50, 50, 0.35);
 		}
 	}
 

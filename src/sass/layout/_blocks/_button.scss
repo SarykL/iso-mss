@@ -1,5 +1,4 @@
 .button {
-	height: 46px;
 	font-family: 'Ubuntu';
 	font-size: 18px;
 	font-weight: 500;
@@ -15,23 +14,6 @@
 		}
 	}
 
-	&_call {
-		width: 202px;
-		margin-top: 40px;
-		margin-left: 60px;
-	}
-
-	&_order {
-		width: 133px;
-		margin-top: 45px;
-	}
-
-	&_details {
-		width: 153px;
-		margin-top: 40px;
-		margin-left: 8px;
-	}
-
 	&_empty {
 		border: 2px solid $buttons-text-color;
 
@@ -40,4 +22,37 @@
 			background-color: #133c42;
 		}
 	}
+
+	&_call {
+		height: 46px;
+		width: 202px;
+		margin-top: 40px;
+		margin-left: 60px;
+	}
+
+	&_order {
+		height: 46px;
+		width: 133px;
+		margin-top: 45px;
+	}
+
+	&_details {
+		height: 46px;
+		width: 153px;
+		margin-top: 40px;
+		margin-left: 8px;
+	}
+
+	&_more {
+		height: 29px;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 20px;
+		padding: 0 15px;
+		position: absolute;
+		bottom: 40px;
+		right: 45px;
+	}
+
+
 }
