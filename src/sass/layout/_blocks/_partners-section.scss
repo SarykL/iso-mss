@@ -1,0 +1,23 @@
+.partners {
+	background: #fff;
+	margin-top: 55px;
+
+	& .owl-dot {
+		width: 44px;
+		height: 8px;
+		border-radius: 4px;
+		background-color: rgba(107, 238, 167, 0.44);
+		display: inline-block;
+		margin-right: 15px;
+
+		&.active {
+			background-color: #6beea7;
+		}
+
+	}
+
+	& .owl-dots {
+		@include j-align(h);
+		margin-top: 20px;
+	}
+}

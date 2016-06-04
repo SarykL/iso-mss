@@ -29,6 +29,21 @@ $(function () {
 		navText: ["",""],
 		loop: false,
 		dots: false,
+		touchDrag: true,
+		responsive: false
+	});
+
+	$('.partners__carousel').owlCarousel({
+		items: 1,
+		nav: false,
+		loop: true,
+		dots: true,
+		touchDrag: true,
+		autoplay: true,
+		margin: 300,
+		autoplaySpeed: 2000,
+		autoplayTimeout: 15000,
+		dotsSpeed: 2000,
 		responsive: false
 	});
 
