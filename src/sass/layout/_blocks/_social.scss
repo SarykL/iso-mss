@@ -1,0 +1,29 @@
+.social {
+	float: left;
+	margin-top: 15px;
+
+	&__list {
+
+	}
+
+	&__item {
+		display: inline;
+		margin-right: 15px;
+	}
+
+	&__link {
+		text-indent: 100%;
+	    white-space: nowrap;
+	    overflow: hidden;
+		display: block;
+
+		&_fb {
+			@include sprite($fb);
+			display: inline-block;
+		}
+		&_vk {
+			@include sprite($vk);
+			display: inline-block;
+		}
+	}
+}

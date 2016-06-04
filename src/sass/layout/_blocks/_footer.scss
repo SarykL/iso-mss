@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Footer styles
+   ========================================================================== */
+
+
+.footer {
+	@include clearfix();
+	width: 100%;
+	height: 360px;
+	background: $text-color;
+	min-width: 1200px;
+
+
+
+	&__content {
+		@include clearfix();
+		float: left;
+		margin-top: 50px;
+		font-family: 'Ubuntu';
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 18px;
+		color: #fff;
+	}
+
+	&__services {
+		// @include j-column(3/5);
+		width: 400px;
+		float: left;
+		margin-right: 40px;
+	}
+
+	&__company {
+		float: left;
+		margin-right: 110px;
+	}
+
+	&__contacts {
+		float: left;
+		width: 190px;
+	}
+
+	&__segment-title {
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 36px;
+		color: #fff;
+	}
+
+	&__status {
+		float: left;
+		margin-top: 15px;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 24px;
+	}
+}

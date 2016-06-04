@@ -1,7 +1,7 @@
 include _blocks/_logo
 include _blocks/_navigation
 include _blocks/_search
-include _blocks/_menu
+include _blocks/_dropdown-menu
 include _blocks/_contacts
 include _blocks/_button
 
@@ -13,5 +13,5 @@ header.header
 			+search
 		.header-bottom
 			+menu
-			+contacts
+			+contacts().contacts_header
 			+button({'text' : 'Заказать звонок', 'type' : 'button'}).button_call.button_filled

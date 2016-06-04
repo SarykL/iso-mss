@@ -1,0 +1,5 @@
+mixin socials(socials)
+	.social
+		ul.social__list  
+			each social in socials
+				li.social__item: a.social__link(class='social__link_#{social.class}' href=social.href)= social.text

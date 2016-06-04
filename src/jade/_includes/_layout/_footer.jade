@@ -1,1 +1,31 @@
-footer
+include _blocks/_logo
+include _blocks/_simple-menu
+include _blocks/_simple-company
+include _blocks/_contacts
+include _blocks/_social
+footer.footer
+	.container
+		+logo({'src' : 'img/logo-footer.svg'}).logo_footer
+		.footer__content
+			.footer__services
+				.footer__segment-title: | Услуги
+				+simple-menu
+			.footer__company
+				.footer__segment-title: | О компании
+				+simple-company
+			.footer__contacts
+				+contacts().contacts_footer
+				+socials([{
+				  'class': 'fb',
+				  'href': 'facebook.com',
+				  'text': 'facebook.com'
+				}, {
+				  'class': 'vk',
+				  'href': 'vk.com',
+				  'text': 'vkontakte.com'
+				}])
+				a(href="#").footer__status: | Проверить статус сертификата в реестре
+				
+				
+
+	

@@ -1,4 +1,9 @@
 mixin contacts()
-	address.contacts
+	address.contacts&attributes(attributes)
+		span.contacts__title: | Адрес
+		span.contacts__location: | Санкт-Петербург, пр. Обуховской Обороны, д. 86, лит. К
+		span.contacts__title: | Телефон
 		a(href="tel:+88129205990").contacts__phone: | 8 (812)  920 59 90
+		span.contacts__title: | E-mail:
 		a(href="mailto:mss-standart@mail.ru").contacts__mail: | mss-standart@mail.ru
+		

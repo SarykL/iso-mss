@@ -1,14 +1,18 @@
+@import "_blocks/footer";
 @import "_blocks/logo";
 @import "_blocks/navigation";
 @import "_blocks/search";
-@import "_blocks/menu";
+@import "_blocks/dropdown-menu";
 @import "_blocks/contacts";
 @import "_blocks/button";
 @import "_blocks/banner";
 @import "_blocks/about-section";
 @import "_blocks/section-header";
 @import "_blocks/services-section";
+@import "_blocks/simple-menu";
+@import "_blocks/simple-company";
 @import "_blocks/news-section";
+@import "_blocks/social";
 @import "_blocks/partners-section";
 
 
@@ -18,12 +22,14 @@
 
 .container {
 	@include j-center(1200px, 15px);
+
 	@include clearfix();
 }
 
 .wrapper {
 	min-width: 1198px;
 	@include j-center(1444px);
+	min-height: calc(100vh - 370px);
 }
 
 .header {
@@ -36,11 +42,6 @@
 	float: left;
 	margin-left: 75px;
 	@include clearfix();
-}
-
-.decoration {
-	@include j-center(1440px);
-	// height: 3200px;
 }
 
 .main {

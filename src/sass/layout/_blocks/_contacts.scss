@@ -1,16 +1,54 @@
 .contacts {
-	float: left;
-	margin-top: 40px;
+	font-family: 'Ubuntu';
+	font-style: normal;
+}
+
+.contacts_header {
 	margin-left: 80px;
 	color: $buttons-text-color;
-	font-family: 'Ubuntu';
 	font-size: 18px;
 	font-weight: 500;
-	font-style: normal;
 	line-height: 26px;
+	margin-top: 40px;
+	float: left;
+	.contacts {
+		&__phone {
+			@include j-stack(1);
 
-	&__phone {
-		@include j-stack(1);
+		}
+		&__location {
+			display: none;
+		}
+		&__title {
+			display: none;
+		}
+	}
+}
 
+
+.contacts_footer {
+	float: left;
+
+	.contacts {
+		&__phone {
+			@include j-stack(1);
+
+		}
+		&__location {
+			@include j-stack(1);
+			// display: none;
+		}
+		&__title {
+			@include j-stack(1);
+			margin-top: 5px;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 30px;
+			&:not(:first-child) {
+				margin-top: 7px;
+
+			}
+			// display: none;
+		}
 	}
 }
